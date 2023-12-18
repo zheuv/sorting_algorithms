@@ -1,7 +1,20 @@
 #include "sort.h"
 #include <stdbool.h>
 
-
+/**
+ * is_array_sorted - Checks if an array is sorted
+ *
+ * This function examines an array of integers to determine if it is sorted
+ * in ascending order. It provides information about the sorting status.
+ *
+ * @array: Pointer to the first element of the array.
+ * @size: Number of elements in the array.
+ *
+ * Return: A struct containing information about the array's sorting status.
+ *   - myBoolean: true if the array is sorted, false otherwise.
+ *   - myInteger: If the array is not sorted, the position where sorting
+ *                needs to resume; otherwise, set to 0.
+ */
 
 struct information is_array_sorted(int *array, size_t size)
 {
@@ -24,6 +37,15 @@ struct information is_array_sorted(int *array, size_t size)
 	return info;
 }
 
+/**
+ * bubble_sort - Sorts an array using the bubble sort algorithm
+ *
+ * This function sorts an array of integers in ascending order using the
+ * bubble sort algorithm. It prints the intermediate steps of the sorting process.
+ *
+ * @array: Pointer to the first element of the array.
+ * @size: Number of elements in the array.
+ */
 void bubble_sort(int *array, size_t size)
 {
 	size_t i;
