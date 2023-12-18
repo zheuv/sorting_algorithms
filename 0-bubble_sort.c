@@ -12,7 +12,7 @@ struct information is_array_sorted(int *array, size_t size)
 	for (i = 0; i < (size -1); i++)
 	{
 		j = i + 1;
-		if array[i] > array[j]
+		if (array[i] > array[j])
 		{
 			info.myBoolean = false;
 			info.myInteger = i;
