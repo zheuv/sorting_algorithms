@@ -22,26 +22,26 @@ struct information is_array_sorted(int *array, size_t size)
 	size_t j;
 	struct information info;
 
-	for (i = 0; i < (size -1); i++)
+	for (i = 0; i < (size - 1); i++)
 	{
 		j = i + 1;
 		if (array[i] > array[j])
 		{
 			info.myBoolean = false;
 			info.myInteger = i;
-			return info;
+			return (info);
 		}
 	}
 	info.myBoolean = true;
 	info.myInteger = 0;
-	return info;
+	return (info);
 }
 
 /**
  * bubble_sort - Sorts an array using the bubble sort algorithm
  *
  * This function sorts an array of integers in ascending order using the
- * bubble sort algorithm. It prints the intermediate steps of the sorting process.
+ * bubble sort algorithm. It prints the intermediate steps of process.
  *
  * @array: Pointer to the first element of the array.
  * @size: Number of elements in the array.
@@ -51,12 +51,12 @@ void bubble_sort(int *array, size_t size)
 	size_t i;
 	size_t j;
 	struct information info;
-	
+
 	info = is_array_sorted(array, size);
-	
+
 	if (!array || size == 0)
 		return;
-	
+
 	while  (info.myBoolean == false)
 	{
 		for (i = info.myInteger; i < (size - 1); i++)
@@ -73,8 +73,4 @@ void bubble_sort(int *array, size_t size)
 		}
 		info = is_array_sorted(array, size);
 	}
-}
-
-
-
-		
+}		
