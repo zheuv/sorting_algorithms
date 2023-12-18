@@ -73,4 +73,4 @@ void bubble_sort(int *array, size_t size)
 		}
 		info = is_array_sorted(array, size);
 	}
-}		
+}
