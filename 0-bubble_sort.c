@@ -45,10 +45,6 @@ void bubble_sort(int *array, size_t size)
 				array[i] = array[i] - array[j];
 				print_array(array, size);
 			}
-			else
-			{
-				break;
-			}
 		}
 		info = is_array_sorted(array, size);
 	}
