@@ -5,8 +5,8 @@
 
 struct information is_array_sorted(int *array, size_t size)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 	struct information info;
 
 	for (i = 0; i < (size -1); i++)
@@ -26,8 +26,8 @@ struct information is_array_sorted(int *array, size_t size)
 
 void bubble_sort(int *array, size_t size)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 	struct information info;
 	
 	info = is_array_sorted(array, size);
