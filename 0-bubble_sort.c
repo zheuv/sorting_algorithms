@@ -53,7 +53,10 @@ void bubble_sort(int *array, size_t size)
 	struct information info;
 	
 	info = is_array_sorted(array, size);
-
+	
+	if (!array || size == 0)
+		return;
+	
 	while  (info.myBoolean == false)
 	{
 		for (i = info.myInteger; i < (size - 1); i++)
