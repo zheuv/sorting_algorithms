@@ -1,5 +1,5 @@
 #include "sort.h"
-
+#include <stdbool.h>
 
 
 
@@ -7,7 +7,7 @@ struct information is_array_sorted(int *array, size_t size)
 {
 	int i;
 	int j;
-	information info;
+	struct information info;
 
 	for (i = 0; i < (size -1); i++)
 	{
