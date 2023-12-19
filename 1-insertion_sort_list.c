@@ -21,7 +21,8 @@ void insertion_sort_list(struct listint_t **list)
 			if (j->next != NULL)
 				j->next->prev = j;
 			i->next = j;
-			j->prev->next = i;
+			if (j->prev != NULL)
+				j->prev->next = i;
 			i->prev = j->prev;
 			j->prev = i;
 			if (i == *list)
