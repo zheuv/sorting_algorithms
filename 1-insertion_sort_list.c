@@ -6,13 +6,13 @@
 
 
 
-void insertion_sort_list( listint_t **list)
+void insertion_sort_list(listint_t **list)
 {
 	listint_t *i, *j;
-	
+
 	if (!list || !*list)
-        	return;
-	
+		return;
+
 	i = *list;
 
 	while (i != NULL)
