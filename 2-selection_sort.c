@@ -4,8 +4,8 @@
 
 void selection_sort(int *array, size_t size)
 {
-	int minimum, j;
-	size_t i;
+	int minimum;
+	size_t i, j, index;
 	bool swap;
 	bool new_min;
 	
