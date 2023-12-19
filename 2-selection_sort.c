@@ -14,8 +14,8 @@ void selection_sort(int *array, size_t size)
 	bool swap;
 
 	if (!array || size < 2)
-		return;	
-	
+		return;
+
 	swap = true;
 
 	minimum = array[0];
