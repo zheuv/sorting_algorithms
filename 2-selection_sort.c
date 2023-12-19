@@ -7,6 +7,9 @@ void selection_sort(int *array, size_t size)
 	int minimum;
 	size_t i, j, index;
 	bool swap;
+    	
+	if (!array || size < 2)
+		return;	
 	
 	swap = true;
 
