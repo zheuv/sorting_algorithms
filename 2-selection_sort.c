@@ -4,10 +4,9 @@
 
 void selection_sort(int *array, size_t size)
 {
-	int minimum;
+	int minimum, tmp;
 	size_t i, j, index;
 	bool swap;
-	bool new_min;
 	
 	new_min = false;
 	swap = true;
@@ -16,23 +15,24 @@ void selection_sort(int *array, size_t size)
 	j = 0;
 	while (swap)
 	{
+		index = j;
 		for (i = j ; i < size; i++)
 		{
 			if (array[i] < minimum)
 			{
 				minimum = array[i];
-				new_min = true;
 				index = i;
 			}
 		}
-		if (new_min)
+		if (index != j)
 		{
 			array[j] = array[j] + array[index];
 			array[index] = array[j] - array[index];
 			array[j] = array[j] - array[index];
-			j += 1;
-			if (j != size)
-				minimum = array[j];
+		}
+		j += 1;
+		if (j != size)
+			minimum = array[j];
 			print_array(array, size);
 		}
 		if ((new_min == false) || (j >= size))
