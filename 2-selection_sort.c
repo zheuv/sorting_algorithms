@@ -36,12 +36,13 @@ void selection_sort(int *array, size_t size)
 			array[j] = array[j] + array[index];
 			array[index] = array[j] - array[index];
 			array[j] = array[j] - array[index];
+			print_array(array, size);
+
 		}
 		j += 1;
 		if (j != size)
 		{
 			minimum = array[j];
-			print_array(array, size);
 		}
 		if (j >= size)
 		{
