@@ -57,6 +57,7 @@ struct information is_array_sorted(int *array, size_t size);
  * @size: Number of elements in @array
  */
 void bubble_sort(int *array, size_t size);
+void insertion_sort_list(listint_t **list);
 
 #endif /* SORT_H */
 

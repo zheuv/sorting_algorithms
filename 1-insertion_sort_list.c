@@ -1,4 +1,22 @@
 void insertion_sort_list(listint_t **list)
 {
-	int change_is_done;
-	change_is_done = 0;
+	listint_t *i, *j, *tmp;
+	
+	i = *list;
+
+	while (i != NULL)
+	{
+		while ((i->prev != NULL) && (i->n < i->prev->n))
+		{
+			j = i->prev;
+			j->next = i->next;
+			i->next->prev = j;
+			i->next = j;
+			j->prev->next = i;
+			i->prev = j->prev;
+			j->prev = i;
+			print_list(*list);
+		}
+		i = i->next;
+	}
+}
