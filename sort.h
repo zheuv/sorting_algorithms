@@ -59,6 +59,10 @@ struct information is_array_sorted(int *array, size_t size);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size);
+void sort(int *array, size_t low, size_t high);
+size_t partition(int *array, size_t low, size_t high);
+void swap(int *array, int i, int j);
 
 #endif /* SORT_H */
 

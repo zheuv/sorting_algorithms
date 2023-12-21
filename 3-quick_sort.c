@@ -25,7 +25,7 @@ void swap(int *array, int i, int j)
  * @return The index of the pivot after partitioning.
  */
 
-size_t partition( int *array, size_t low, size_t high)
+size_t partition( int *array, size_t low, size_t high, size_t size)
 {
 	size_t pivot, i, j;
 	pivot = high;
@@ -37,9 +37,11 @@ size_t partition( int *array, size_t low, size_t high)
 			if (i != j)
 				swap(array, i, j);
 			j++;
+			print_array(array, size);
 		}
 	j++;
 	swap(array, j, pivot);
+	print_array(array, size);
 	return (j + 1);
 }
 
@@ -51,15 +53,15 @@ size_t partition( int *array, size_t low, size_t high)
  * @param high - The ending index of the subarray.
  */
 
-void sort(int *array, size_t low, size_t high)
+void sort(int *array, size_t low, size_t high, size_t size)
 {
 	size_t pivot;
 
 	if (low < high)
 	{
-		pivot = partition(array, low, high);
-		sort(array, low, pivot - 1);
-		sort(array, pivot + 1, high);
+		pivot = partition(array, low, high, size);
+		sort(array, low, pivot - 1, size);
+		sort(array, pivot + 1, high, size);
 	}
 }
 
@@ -75,5 +77,5 @@ void quick_sort(int *array, size_t size)
 	size_t low, high;
 	low = 0;
 	high = size - 1;
-	sort(array, low, high);
+	sort(array, low, high, size);
 }
